@@ -26,6 +26,7 @@
         android:label="@string/app_name"
         android:launchMode="singleTop"
         android:noHistory="true"
+        android:launchMode="singleTop"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -34,7 +35,6 @@
             android:theme="@style/Electric">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -98,6 +98,10 @@
             android:name=".Discover"
             android:label="Nextbit"
             android:theme="@style/Electric" />
+        <activity
+            android:name=".Discover"
+            android:label="Nextbit"
+            android:theme="@style/Mint" />
         <activity
             android:name=".Messages"
             android:label="Forum"
