@@ -87,6 +87,10 @@
             android:label="India Subforum"
             android:theme="@style/Electric" />
         <activity
+            android:name=".donations"
+            android:label="Buy me a coffee"
+            android:theme="@style/Mint" />
+        <activity
             android:name=".Notifications"
             android:label="Forum"
             android:theme="@style/Electric" />

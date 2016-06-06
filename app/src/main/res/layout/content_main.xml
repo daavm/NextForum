@@ -15,6 +15,15 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" >
+
+        <TextView
+            android:text="https://community.nextbit.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="284dp"
+            android:layout_y="533dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/textView24" />
     </WebView>
 
 
