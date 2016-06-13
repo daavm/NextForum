@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "686702048277",
+    "project_id": "nextforum-ccb3f"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686702048277:android:4ad41881ccbf5f31",
+        "android_client_info": {
+          "package_name": "com.daavm.nextbit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_QoN4Qugox83YaTJjSgj7CTT4477W--Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-77968212-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2,
+          "test_banner_ad_unit_id": "ca-app-pub-3940256099942544/6300978111",
+          "test_interstitial_ad_unit_id": "ca-app-pub-3940256099942544/1033173712"
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

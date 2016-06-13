@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-beta1\support-annotations-24.0.0-beta1.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="04705c19cdec60364bc04e2e928c274da1ba301b">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0-beta1_9d4945443c5ceb21e28c4cad3fd199b775ba4ff9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0-beta1\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="471ce760dbf7b784fd74892b5113bca4e0d8def7">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.0.0-beta1_abbd17f4bc9cdc0e8d138da2fa20f1da3dfa19e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\design\24.0.0-beta1\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="6fd4eef51a55508bdf3f43f8ad96992e1da3850b">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.0.0-beta1_ca98d8a91894029d4d99c61d3b1904c53ca8bcb9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="060a7157438a0b1b0706b99c430fb3ecbc5a79a4">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.0.2_764fbf9750ea46000af1cb887c4f92ea98c236f7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.2_4a704693ce141a8c4bc402f6a36be527ec95b3ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.pushbots\pushbots-lib\2.0.13\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="635a77d3f219ad345f4b82dba86e4aabe4f35b94">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.pushbots-pushbots-lib-2.0.13_0faf5424846a899e82e46ae08a7d3fecdb04c4ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="829c6e46cb221c2102801221c648b77113743e81">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.0.2_e61491fb18085c8c71e7ef0bee2f63d2c220d4ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-beta1\jars\libs\internal_impl-24.0.0-beta1.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="23d564c059873f398dc5d967f56791a66472ce76">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0-beta1_4c7309995dcbd8ca4917065b4f32cfcb77e511a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha1\constraint-layout-solver-1.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="78d61c347aa5002119e3c17bffcbebf28fe07b0b">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-alpha1_bd729d769e6ed141553e2430ed2c3fcf9eff6404\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.clans-fab-1.6.4_85b84c2881da774d17087dacb0d40acd1696aa36\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha1\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="ea579447f9afb1fbcb28e150e1cd4bfe7f56e75b">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-alpha1_0a1e6a2efb3fd00130b722071d3a32d7a1ae17e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.2_eb4667ac16b72083ab6a9094d92b5f30bb2bcf68\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.2_6c55f12bd6bb647b1b44d29eceae714b303733dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.2_fbdbc3744c1dccc51fa639c6e02e4048414741d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-beta1\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="97f82fd0c185bd2881a93646954f2429be4baa86">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0-beta1_6510b7e9ea6e42568154fc5864c5c6903960a6ab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="5097896c5c635dd705b14599075fd33a484d215a">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fd282f84877bd9220559c4c5571b89051e7fd961\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="3beb538ab2afa26ed7abdb0871cabce031868b13">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a7b8f4fcf85666072ccc609a25e5f1307b7e1ef2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-beta1\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="8d3137a71200c47974c0454ae8ad272a09c533eb">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0-beta1_05336e2ee1756e6d3b69c43621e86912ccb1ed3d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-beta1\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="f81eecb8d5e9e548f75f277830a94a9b37fbb987">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0-beta1_94dc773bb0258817ad2a64eca97c166615aecb24\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-beta1\jars\classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="3c0208faf42864e6695345e64d1b955070263819">
+        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0-beta1_6d8328d6c85913367e9aebc8aab657c6879f81d2\classes.dex" />
+    </item>
+
+</items>
