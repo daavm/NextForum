@@ -147,7 +147,10 @@ public class store extends AppCompatActivity
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
             finish();
-        } else if (id == R.id.Community) {
+        } else if (id == R.id.donate) {
+            Intent intent2 = new Intent(this,donationsScreen.class);
+            startActivity(intent2);
+        }else if (id == R.id.Community) {
             Intent intent2 = new Intent(store.this,MainActivity.class);
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);

@@ -29,7 +29,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:label="NextForum"
             android:theme="@style/Mint">
             <intent-filter>
@@ -51,12 +51,12 @@
             android:label="NextForum App"
             android:theme="@style/Mint" />
         <activity
-            android:name=".India"
-            android:label="India Subforum"
+            android:name=".donationsScreen"
+            android:label="Buy me a cup of coffee!"
             android:theme="@style/Mint" />
         <activity
-            android:name=".donations"
-            android:label="Buy me a coffee"
+            android:name=".India"
+            android:label="India Subforum"
             android:theme="@style/Mint" />
         <activity
             android:name=".Notifications"
@@ -87,7 +87,7 @@
             android:label="wiki/About Nextbit"
             android:theme="@style/Mint" />
         <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:label="wiki/Login Page"
             android:theme="@style/Mint" />
         <activity

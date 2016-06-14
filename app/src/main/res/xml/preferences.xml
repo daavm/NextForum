@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Choose your Theme! (JUST ONE!)">
-    <CheckBoxPreference android:title="You prefer shadow?"
+    <PreferenceCategory android:title="THEME CHOOSER">
+    <CheckBoxPreference android:title="You prefer darkness?"
         android:id="@+id/midnight"
         android:defaultValue="false"
         android:summary="Midnight Theme"
         android:key="midnightTheme" />
-    <CheckBoxPreference android:title="Mmm... Mint :)"
+    <CheckBoxPreference android:title="Mmm... Fresh look! :)"
         android:id="@+id/mint"
         android:defaultValue="false"
         android:summary="Mint Theme"
         android:key="mintTheme" />
-    <CheckBoxPreference android:title="Oh, Electric, nice decision!"
+    <CheckBoxPreference android:title="Oh, nice decision!"
         android:id="@+id/electric"
         android:defaultValue="false"
-        android:summary="Electric Theme"
+        android:summary="Electric Theme (Default)"
         android:key="electricTheme" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Settings">
+    <PreferenceCategory android:title="FORUM">
         <CheckBoxPreference android:title="Load forum in desktop mode"
             android:defaultValue="false"
             android:summary="Browser mode"

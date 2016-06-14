@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="false"
         revision="24.0.0 rc4"
-        sha1="5097896c5c635dd705b14599075fd33a484d215a">
+        sha1="935e0f5b45999dec07034c4e90973001a8dd05ee">
         <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fd282f84877bd9220559c4c5571b89051e7fd961\classes.dex" />
     </item>
     <item
@@ -151,7 +151,7 @@
         jumboMode="true"
         optimize="false"
         revision="24.0.0 rc4"
-        sha1="3beb538ab2afa26ed7abdb0871cabce031868b13">
+        sha1="cb5fdb3b785681cea2703e92020d07b0afb41586">
         <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a7b8f4fcf85666072ccc609a25e5f1307b7e1ef2\classes.dex" />
     </item>
     <item

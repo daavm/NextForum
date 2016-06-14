@@ -40,5 +40,4 @@ import com.pushbots.push.Pushbots;
 
 public class Login extends MainActivity
 {
-
 }

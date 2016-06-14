@@ -157,7 +157,7 @@ public class wiki extends AppCompatActivity
             finish();
         }
         else if (id == R.id.donate) {
-            Intent intent2 = new Intent(this,donations.class);
+            Intent intent2 = new Intent(this,donationsScreen.class);
             startActivity(intent2);
         }
         else if (id == R.id.india) {
