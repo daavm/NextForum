@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.ValueCallback;
@@ -21,8 +23,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.View.OnKeyListener;
 
 import com.pushbots.push.Pushbots;
 
@@ -40,6 +44,7 @@ public class LoginPage extends AppCompatActivity
         ////////////////
         //Choose Theme//
         ////////////////
+        final Activity activity = this;
         boolean midnightTheme = preferences.getBoolean("midnightTheme", false);
         boolean mintTheme = preferences.getBoolean("mintTheme", false);
         boolean electricTheme = preferences.getBoolean("electricTheme", false);
@@ -56,6 +61,7 @@ public class LoginPage extends AppCompatActivity
         final String loged = preferences.getString("loged", "no");
         String nope = preferences.getString("nope", "yes");
         super.onCreate(savedInstanceState);
+
         if(loged.equals("no")){
         }else{
             Intent logedBefore = new Intent(getApplicationContext(), MainActivity.class);
@@ -65,6 +71,16 @@ public class LoginPage extends AppCompatActivity
         }
         Pushbots.sharedInstance().init(this);
         setContentView(R.layout.activity_main_login);
+        LinearLayout layout =(LinearLayout)findViewById(R.id.login_layout);
+        if (midnightTheme) {
+            layout.setBackgroundColor(Color.parseColor("#FF303030"));
+        } else if (mintTheme) {
+            layout.setBackgroundColor(Color.parseColor("#FF9ADADA"));
+        } else if (electricTheme) {
+            layout.setBackgroundColor(Color.parseColor("#57a5ea"));
+        } else {
+            layout.setBackgroundColor(Color.parseColor("#57a5ea"));
+        }
         String username2 = preferences.getString("usernameWV", "hello");
         String pass2 = preferences.getString("passwordWV", "hello");
         if(preferences.getString("usernameWV", "hello") != "hello") {
@@ -85,7 +101,7 @@ public class LoginPage extends AppCompatActivity
                 });
             }
         }
-        Button seguir = (Button) findViewById(R.id.button);
+        final Button seguir = (Button) findViewById(R.id.button);
         seguir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,6 +118,7 @@ public class LoginPage extends AppCompatActivity
                 startActivity(logedBefore);
             }
         });
+        EditText pass = (EditText)findViewById(R.id.editText2);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.setVerticalScrollBarEnabled(false);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -112,8 +129,18 @@ public class LoginPage extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.NavigationView);
         navigationView.setScrollBarSize(0);
         navigationView.setNavigationItemSelectedListener(this);
-
-    }
+        pass.setOnKeyListener(new OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    seguir.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
+                }
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.

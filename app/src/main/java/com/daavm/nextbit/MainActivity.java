@@ -299,7 +299,6 @@ public class MainActivity extends AppCompatActivity
                             myWebView.setWebViewClient(new WebViewClient() {
                                 @Override
                                 public void onPageFinished(WebView view, String url) {
-                                    myWebView.setVisibility(View.VISIBLE);
                                     super.onPageFinished(view, "javascript:document.getElementById('form').submit();");
                                     if (myWebView.getTitle().contains("Sign In")) {
                                                 Intent logedOut = new Intent(getApplicationContext(), LoginPage.class);
@@ -312,6 +311,7 @@ public class MainActivity extends AppCompatActivity
                                                 editor.commit();
                                                 startActivity(logedOut);
                                             } else {
+                                                myWebView.setVisibility(View.VISIBLE);
                                                 final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                                                 SharedPreferences.Editor editor = preferences.edit();
                                                 editor.remove("loged" + String.valueOf(loged));
