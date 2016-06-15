@@ -29,8 +29,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Login"
-            android:label="NextForum"
+            android:name=".LoginPage"
+            android:label="Nextbit Community Forum"
             android:theme="@style/Mint">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +45,10 @@
         <activity
             android:name=".wikiFAQ_MobNet"
             android:label="wiki/FAQ/Mobile Networks"
+            android:theme="@style/Mint" />
+        <activity
+            android:name=".MainActivity"
+            android:label="NextForum"
             android:theme="@style/Mint" />
         <activity
             android:name=".appthread"
@@ -87,7 +91,7 @@
             android:label="wiki/About Nextbit"
             android:theme="@style/Mint" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:label="wiki/Login Page"
             android:theme="@style/Mint" />
         <activity

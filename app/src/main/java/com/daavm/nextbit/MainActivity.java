@@ -37,7 +37,9 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.URLUtil;
 import android.webkit.ValueCallback;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;import android.view.View.OnClickListener;
@@ -52,6 +54,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
 import com.pushbots.push.Pushbots;
 
@@ -69,7 +72,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout swipeRefreshLayout;
     private int myColor = Color.parseColor("#8fd6bd");
-
     private boolean isFirstTime() {
         SharedPreferences preferences = getPreferences(MODE_PRIVATE);
         boolean ranBefore = preferences.getBoolean("RanBefore", false);
@@ -84,10 +86,10 @@ public class MainActivity extends AppCompatActivity
     private String notification;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         ////////////////
         //Choose Theme//
         ////////////////
-        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         boolean midnightTheme = preferences.getBoolean("midnightTheme", false);
         boolean mintTheme = preferences.getBoolean("mintTheme", false);
         boolean electricTheme = preferences.getBoolean("electricTheme", false);
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity
         //Choose Theme//
         ////////////////
         super.onCreate(savedInstanceState);
+        final String loged = preferences.getString("loged", "no");
         Pushbots.sharedInstance().init(this);
         final Activity activity = this;
             if (isFirstTime()) {
@@ -115,9 +118,11 @@ public class MainActivity extends AppCompatActivity
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 });
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("loged", "no");
+                editor.commit();
                 alertDialog.setIcon(R.drawable.sheepalert);
                 alertDialog.show();
-                final String hello = "hello";
             }
 
         boolean desktopMode = preferences.getBoolean("desktopMode", false);
@@ -138,6 +143,7 @@ public class MainActivity extends AppCompatActivity
         //WebView Start//
         /////////////////
         final WebView myWebView = (WebView) this.findViewById(R.id.webView);
+        myWebView.setVisibility(View.VISIBLE);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setBuiltInZoomControls(true);
@@ -149,7 +155,6 @@ public class MainActivity extends AppCompatActivity
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1");
         myWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
-
         if (desktopMode) {
             myWebView.setInitialScale(140);
             myWebView.loadUrl("javascript:if (typeof(document.getElementsByClassName('nav-links-wrapper')[0]) != 'undefined' && document.getElementsByClassName('nav-links-wrapper')[0] != null){document.getElementsByClassName('nav-links-wrapper')[0].style.display = 'none';} void 0");
@@ -159,6 +164,7 @@ public class MainActivity extends AppCompatActivity
                 public void onPageFinished(WebView view, String url) {
                     super.onPageFinished(view, url);
                     myWebView.loadUrl("javascript:if (typeof(document.getElementsByClassName('nav-links-wrapper')[0]) != 'undefined' && document.getElementsByClassName('nav-links-wrapper')[0] != null){document.getElementsByClassName('nav-links-wrapper')[0].style.display = 'none';} void 0");
+                    myWebView.loadUrl("javascript:if (typeof(document.getElementsByClassName('lia-component-common-widget-slide-out-user-menu')[0]) != 'undefined' && document.getElementsByClassName('lia-component-common-widget-slide-out-user-menu')[0] != null){document.getElementsByClassName('lia-component-common-widget-slide-out-user-menu')[0].style.display = 'none';} void 0");
                 }
             });
         }
@@ -177,76 +183,154 @@ public class MainActivity extends AppCompatActivity
                     title.setText(myWebView.getTitle());
             }
         });
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                appbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator()).start();
-                myWebView.scrollTo(0, 0);
-            }
-        });
-        floatingActionButton.setOnLongClickListener(new OnLongClickListener() {
+        myWebView.setWebViewClient(new WebViewClient() {
             @Override
-            public boolean onLongClick(View v) {
-
-                    return true;
-            }
-        });
-        TextView txtView = (TextView) findViewById(R.id.toolbar_title);
-        txtView.setOnLongClickListener(new OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                // TODO Auto-generated method stub
-                String stringYouExtracted = myWebView.getUrl();
-                android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", stringYouExtracted);
-                clipboard.setPrimaryClip(clip);
-                Toast.makeText(getApplicationContext(), "Copied URL to clipboard", Toast.LENGTH_LONG).show();
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                myWebView.loadUrl(url);
                 return true;
             }
-        });
-
-        if (this.getLocalClassName().equals("MainActivity")){
-            myWebView.loadUrl("https://community.nextbit.com/");
-        }
-        else if (this.getLocalClassName().equals("Notifications")){
-            myWebView.loadUrl("https://community.nextbit.com/t5/notificationfeed/page");
-        }
-        else if (this.getLocalClassName().equals("appthread")){
-            myWebView.loadUrl("https://community.nextbit.com/t5/General-Q-A/Nextbit-Forum-App-NextForum/m-p/20063#M10860");
-        }
-        else if (this.getLocalClassName().equals("discover")){
-            myWebView.loadUrl("https://www.nextbit.com");
-        }
-        else if (this.getLocalClassName().equals("forumsettings")){
-            myWebView.loadUrl("https://community.nextbit.com/t5/user/myprofilepage/tab/personal-profile");
-        }
-        else if (this.getLocalClassName().equals("India")){
-            myWebView.loadUrl("https://community.nextbit.com/t5/India/bd-p/India");
-        }
-        else if (this.getLocalClassName().equals("Login")){
-                String user = "david";
-            //TODO settings, dejar elegir al usuario si quiere pantalla de logeo o no
-               String pass = "ruben22798";
-                myWebView.loadUrl("https://community.nextbit.com/t5/user/userloginpage?dest_url=https:%2F%2Fcommunity.nextbit.com%2F");
-                   final String js = "javascript:document.getElementById('lia-login').value = '" + user + "';document.getElementById('lia-password').value='" + pass + "';";
+            @Override
+            public void onLoadResource(WebView view, String url) {
+                final String loged = preferences.getString("loged", "no");
+                if (url.equals("https://community.nextbit.com/t5/community/page.logoutpage?t:cp=authentication/contributions/unticketedauthenticationactions&dest_url=https%3A%2F%2Fcommunity.nextbit.com%2F")) {
+                    myWebView.setVisibility(View.GONE);
+                    Toast.makeText(getApplicationContext(), "Loging out...", Toast.LENGTH_LONG).show();
+                    final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     myWebView.setWebViewClient(new WebViewClient() {
-                               @Override
-                     public void onPageFinished(WebView view, String url) {
-                           super.onPageFinished(view, "https://community.nextbit.com/t5/user/userloginpage?dest_url=https:%2F%2Fcommunity.nextbit.com%2F");
-                           view.evaluateJavascript(js, new ValueCallback<String>() {
-                               @Override
-                                public void onReceiveValue(String s) {
+                        @Override
+                        public void onPageFinished(WebView view, String url) {
+                            super.onPageFinished(view, url);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.remove("loged" + String.valueOf(loged));
+                            editor.apply();
+                            editor.putString("loged", "no");
+                            editor.commit();
+                            Intent logedOut = new Intent(getApplicationContext(), LoginPage.class);
+                            startActivity(logedOut);
+                        }
+                    });
+                }else if (url.equals("https://community.nextbit.com/t5/user/userloginpage?dest_url=https:%2F%2Fcommunity.nextbit.com%2F")) {
+                    if (loged.equals("no")) {
+                        Intent logedOut = new Intent(getApplicationContext(), LoginPage.class);
+                        logedOut.putExtra("fail", "Login failed, please revise your username and your password");
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("nope", "no");
+                        editor.commit();
+                        startActivity(logedOut);
+                    } else {
+                        myWebView.loadUrl("https://community.nextbit.com");
+                }
+                }
+            }
+        });
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {appbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator()).start();
+                        myWebView.scrollTo(0, 0);
+                    }
+                });
+        floatingActionButton.setOnLongClickListener(new OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        Toast.makeText(getApplicationContext(), "Loging out...", Toast.LENGTH_LONG).show();
+                        myWebView.setVisibility(View.GONE);
+                        myWebView.setWebViewClient(new WebViewClient() {
+                            @Override
+                            public void onPageFinished(WebView view, String url) {
+                                super.onPageFinished(view, url);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.remove("loged" + String.valueOf(loged));
+                                editor.apply();
+                                editor.putString("loged", "no");
+                                editor.commit();
+                                Intent logedOut = new Intent(getApplicationContext(), LoginPage.class);
+                                startActivity(logedOut);
+                            }
+                        });
+                        myWebView.loadUrl("https://community.nextbit.com/t5/community/page.logoutpage?t:cp=authentication/contributions/unticketedauthenticationactions&dest_url=https%3A%2F%2Fcommunity.nextbit.com%2F");
+                        return true;
+                    }
+                });
+        TextView txtView = (TextView) findViewById(R.id.toolbar_title);
+        txtView.setOnLongClickListener(new OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        // TODO Auto-generated method stub
+                        String stringYouExtracted = myWebView.getUrl();
+                        android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                        android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", stringYouExtracted);
+                        clipboard.setPrimaryClip(clip);
+                        Toast.makeText(getApplicationContext(), "Copied URL to clipboard", Toast.LENGTH_LONG).show();
+                        return true;
+                    }
+                });
+
+        if (this.getLocalClassName().equals("MainActivity")) {
+            myWebView.loadUrl("https://community.nextbit.com/");
+        } else if (this.getLocalClassName().equals("Notifications")) {
+            myWebView.loadUrl("https://community.nextbit.com/t5/notificationfeed/page");
+        } else if (this.getLocalClassName().equals("appthread")) {
+            myWebView.loadUrl("https://community.nextbit.com/t5/General-Q-A/Nextbit-Forum-App-NextForum/m-p/20063#M10860");
+        } else if (this.getLocalClassName().equals("discover")) {
+            myWebView.loadUrl("https://www.nextbit.com");
+        } else if (this.getLocalClassName().equals("forumsettings")) {
+            myWebView.loadUrl("https://community.nextbit.com/t5/user/myprofilepage/tab/personal-profile");
+        } else if (this.getLocalClassName().equals("India")) {
+            myWebView.loadUrl("https://community.nextbit.com/t5/India/bd-p/India");
+        } else if (this.getLocalClassName().equals("Login")) {
+            if (loged.equals("no")) {
+                myWebView.setVisibility(View.GONE);
+                Toast.makeText(getApplicationContext(), "Loging in...", Toast.LENGTH_LONG).show();
+                myWebView.loadUrl("https://community.nextbit.com/t5/user/userloginpage?dest_url=https:%2F%2Fcommunity.nextbit.com%2F");
+                Bundle bundle = getIntent().getExtras();
+                String username = bundle.getString("user");
+                String password = bundle.getString("password");
+                //TODO settings, dejar elegir al usuario si quiere pantalla de logeo o no
+                final String js = "javascript:document.getElementById('lia-login').value = '" + username + "';document.getElementById('lia-password').value='" + password + "';";
+                myWebView.setWebViewClient(new WebViewClient() {
+                    @Override
+                    public void onPageFinished(WebView view, String url) {
+                        super.onPageFinished(view, "https://community.nextbit.com/t5/user/userloginpage?dest_url=https:%2F%2Fcommunity.nextbit.com%2F");
+                        view.evaluateJavascript(js, new ValueCallback<String>() {
+                            @Override
+                            public void onReceiveValue(String s) {
+                            }
+                        });
+                        if (myWebView.getUrl().equals("https://community.nextbit.com/t5/user/userloginpage?dest_url=https:%2F%2Fcommunity.nextbit.com%2F")) {
+                            myWebView.setWebViewClient(new WebViewClient() {
+                                @Override
+                                public void onPageFinished(WebView view, String url) {
+                                    myWebView.setVisibility(View.VISIBLE);
+                                    super.onPageFinished(view, "javascript:document.getElementById('form').submit();");
+                                    if (myWebView.getTitle().contains("Sign In")) {
+                                                Intent logedOut = new Intent(getApplicationContext(), LoginPage.class);
+                                                logedOut.putExtra("fail", "Login failed, please revise your username and your password");
+                                                SharedPreferences.Editor editor = preferences.edit();
+                                                editor.remove("loged" + String.valueOf(loged));
+                                                editor.apply();
+                                                editor.putString("nope", "yes");
+                                                editor.putString("loged", "no");
+                                                editor.commit();
+                                                startActivity(logedOut);
+                                            } else {
+                                                final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                                SharedPreferences.Editor editor = preferences.edit();
+                                                editor.remove("loged" + String.valueOf(loged));
+                                                editor.apply();
+                                                editor.putString("loged", "yes");
+                                                editor.commit();
+                                            }
                                 }
-                           });
-                                   if (myWebView.getUrl().equals("https://community.nextbit.com/t5/user/userloginpage?dest_url=https:%2F%2Fcommunity.nextbit.com%2F")) {
-                                       myWebView.loadUrl("javascript:document.getElementById('form').submit();");
-                                   }
-                         }
-                 });
-        }
-        else if (this.getLocalClassName().equals("Messages")){
+                            });
+                            myWebView.loadUrl("javascript:document.getElementById('form').submit();");
+                        }
+                    }
+                });
+            } else {
+                myWebView.loadUrl("https://community.nextbit.com");
+            }
+        } else if (this.getLocalClassName().equals("Messages")) {
             myWebView.loadUrl("https://community.nextbit.com/t5/notes/privatenotespage");
         }
-
         ///////////////
         //WebView End//
         ///////////////
@@ -262,25 +346,23 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         myWebView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             final AppBarLayout appbar = (AppBarLayout) findViewById(R.id.app_bar);
-            @Override
-            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                if (scrollY > 1200){
-                    if (scrollY > oldScrollY) {
-                        appbar.animate().translationY(-appbar.getBottom()).setInterpolator(new AccelerateInterpolator()).start();
+                    @Override
+                    public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                        if (scrollY > 1200) {
+                            if (scrollY > oldScrollY) {
+                                appbar.animate().translationY(-appbar.getBottom()).setInterpolator(new AccelerateInterpolator()).start();
+                            }
+                        }
+                        if (scrollY < oldScrollY) {
+                            if (scrollY < 1200) {
+                                appbar.setVisibility(View.VISIBLE);
+                            } else {
+                                appbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator()).start();
+                            }
+                        }
                     }
-                }
-                if (scrollY < oldScrollY){
-                    if (scrollY < 1200){
-                        appbar.setVisibility(View.VISIBLE);
-                    }
-                    else {
-                        appbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator()).start();
-                    }
-                }
+                });
             }
-        });
-
-    }
     @Override
     public void onRefresh() {
         WebView myWebView = (WebView) this.findViewById(R.id.webView);
@@ -358,8 +440,8 @@ public class MainActivity extends AppCompatActivity
             WebView myWebView = (WebView) this.findViewById(R.id.webView);
             myWebView.loadUrl("https://community.nextbit.com/t5/notificationfeed/page");
         }  else if (id == R.id.signin) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/user/userloginpage?dest_url=https%3A%2F%2Fcommunity.nextbit.com%2F");
+            Intent intent = new Intent(this,LoginPage.class);
+            startActivity(intent);
         }   else if (id == R.id.forumsettings) {
             WebView myWebView = (WebView) this.findViewById(R.id.webView);
             myWebView.loadUrl("https://community.nextbit.com/t5/user/myprofilepage/tab/personal-profile");
