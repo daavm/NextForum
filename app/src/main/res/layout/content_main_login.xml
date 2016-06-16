@@ -8,6 +8,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main_login"
     tools:context=".MainActivity"
+    android:background="@color/black"
     android:orientation="vertical"
     android:layout_x="91dp"
     android:layout_y="197dp"
@@ -38,22 +39,48 @@
         android:layout_marginTop="5dp"
         android:id="@+id/editText2"
         android:layout_gravity="center"/>
-
+    <Button
+        android:text="Forgot your password?"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="30dp"
+        android:textAllCaps="false"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:id="@+id/forgot"
+        />
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:layout_marginTop="210dp">
+        android:layout_marginTop="175dp">
         <Button
             android:text="Log in"
-            android:background="#FFD8d8d8"
-            android:textColor="@color/black"
+            android:background="@drawable/buttonshape"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:textAllCaps="false"
             android:layout_width="75dp"
             android:layout_height="35dp"
             android:id="@+id/button"
             android:layout_marginLeft="245dp"
             />
+        <Button
+            android:text="Sign Up"
+            android:background="@drawable/buttonshape"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="13dp"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:id="@+id/signup"
+            android:layout_marginLeft="160dp"
+            />
         <TextView
             android:text="NextForum App"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="14dp"
             android:textAlignment="center"

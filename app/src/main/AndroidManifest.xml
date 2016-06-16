@@ -43,6 +43,26 @@
             android:label="Settings"
             android:theme="@style/Mint" />
         <activity
+            android:name=".forgotPassword"
+            android:label="Forgot your password?"
+            android:theme="@style/Mint" />
+        <activity
+            android:name=".forgotPasswordWV"
+            android:label="Forgot your password?"
+            android:theme="@style/Mint" />
+        <activity
+            android:name=".signup"
+            android:label="Settings"
+            android:theme="@style/Mint" />
+        <activity
+            android:name=".Login"
+            android:label="Settings"
+            android:theme="@style/Mint" />
+        <activity
+            android:name=".signupPage"
+            android:label="Nextbit Community Forum"
+            android:theme="@style/Mint" />
+        <activity
             android:name=".wikiFAQ_MobNet"
             android:label="wiki/FAQ/Mobile Networks"
             android:theme="@style/Mint" />
@@ -89,10 +109,6 @@
         <activity
             android:name=".wikiAbout"
             android:label="wiki/About Nextbit"
-            android:theme="@style/Mint" />
-        <activity
-            android:name=".Login"
-            android:label="wiki/Login Page"
             android:theme="@style/Mint" />
         <activity
             android:name=".wikiFAQ_General"

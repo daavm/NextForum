@@ -12,8 +12,6 @@
                 android:title="India Subforum" />
             <item android:id="@+id/forumsettings" android:icon="@drawable/icon"
                 android:title="My Settings" />
-            <item android:id="@+id/signin" android:icon="@drawable/icon"
-                android:title="Login Page" />
 
         </menu>
     </item>

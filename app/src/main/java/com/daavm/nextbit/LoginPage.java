@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.ValueCallback;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -45,6 +46,7 @@ public class LoginPage extends AppCompatActivity
         //Choose Theme//
         ////////////////
         final Activity activity = this;
+        final Boolean loged = preferences.getBoolean("loged", false);
         boolean midnightTheme = preferences.getBoolean("midnightTheme", false);
         boolean mintTheme = preferences.getBoolean("mintTheme", false);
         boolean electricTheme = preferences.getBoolean("electricTheme", false);
@@ -58,134 +60,164 @@ public class LoginPage extends AppCompatActivity
         } else {
             setTheme(R.style.Electric);
         }
-        final String loged = preferences.getString("loged", "no");
-        String nope = preferences.getString("nope", "yes");
         super.onCreate(savedInstanceState);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
-        if(loged.equals("no")){
-        }else{
+        if(loged){
             Intent logedBefore = new Intent(getApplicationContext(), MainActivity.class);
             logedBefore.putExtra("password", "");
             logedBefore.putExtra("user", "");
             startActivity(logedBefore);
         }
-        Pushbots.sharedInstance().init(this);
-        setContentView(R.layout.activity_main_login);
-        LinearLayout layout =(LinearLayout)findViewById(R.id.login_layout);
-        if (midnightTheme) {
-            layout.setBackgroundColor(Color.parseColor("#FF303030"));
-        } else if (mintTheme) {
-            layout.setBackgroundColor(Color.parseColor("#FF9ADADA"));
-        } else if (electricTheme) {
-            layout.setBackgroundColor(Color.parseColor("#57a5ea"));
-        } else {
-            layout.setBackgroundColor(Color.parseColor("#57a5ea"));
-        }
-        String username2 = preferences.getString("usernameWV", "hello");
-        String pass2 = preferences.getString("passwordWV", "hello");
-        if(preferences.getString("usernameWV", "hello") != "hello") {
-            if(preferences.getString("passwordWV", "hello") != "hello") {
-                EditText user = (EditText)findViewById(R.id.editText);
-                EditText pass = (EditText)findViewById(R.id.editText2);
-                user.setText(username2, TextView.BufferType.EDITABLE);
-                pass.setText(pass2, TextView.BufferType.EDITABLE);
-                Button seguir = (Button) findViewById(R.id.button);
-                seguir.setOnClickListener(new View.OnClickListener() {
-                                              @Override
-                                              public void onClick(View v) {
-                Intent logedBefore = new Intent(getApplicationContext(), Login.class);
-                logedBefore.putExtra("user", preferences.getString("usernameWV", "hello"));
-                logedBefore.putExtra("password", preferences.getString("passwordWV", "hello"));
-                startActivity(logedBefore);
-                                              }
-                });
+            Pushbots.sharedInstance().init(this);
+            setContentView(R.layout.activity_main_login);
+            String username2 = preferences.getString("usernameWV", "hello");
+            String pass2 = preferences.getString("passwordWV", "hello");
+            if (preferences.getString("usernameWV", "hello") != "hello") {
+                if (preferences.getString("passwordWV", "hello") != "hello") {
+                    EditText user = (EditText) findViewById(R.id.editText);
+                    EditText pass = (EditText) findViewById(R.id.editText2);
+                    user.setText(username2, TextView.BufferType.EDITABLE);
+                    pass.setText(pass2, TextView.BufferType.EDITABLE);
+                    Button seguir = (Button) findViewById(R.id.button);
+                    seguir.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent logedBefore = new Intent(getApplicationContext(), Login.class);
+                            logedBefore.putExtra("user", preferences.getString("usernameWV", "hello"));
+                            logedBefore.putExtra("password", preferences.getString("passwordWV", "hello"));
+                            startActivity(logedBefore);
+                        }
+                    });
+                }
             }
-        }
-        final Button seguir = (Button) findViewById(R.id.button);
-        seguir.setOnClickListener(new View.OnClickListener() {
+        final Button forgot = (Button) findViewById(R.id.forgot);
+        forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor editor = preferences.edit();
-                EditText user = (EditText)findViewById(R.id.editText);
-                EditText pass = (EditText)findViewById(R.id.editText2);
-                String username = user.getText().toString();
-                String password = pass.getText().toString();
-                editor.putString("usernameWV", username).commit();
-                editor.putString("passwordWV", password).commit();
-                Intent logedBefore = new Intent(getApplicationContext(), Login.class);
-                logedBefore.putExtra("user", username);
-                logedBefore.putExtra("password", password);
+                Intent logedBefore = new Intent(getApplicationContext(), forgotPassword.class);
                 startActivity(logedBefore);
             }
         });
-        EditText pass = (EditText)findViewById(R.id.editText2);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.setVerticalScrollBarEnabled(false);
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.NavigationView);
-        navigationView.setScrollBarSize(0);
-        navigationView.setNavigationItemSelectedListener(this);
-        pass.setOnKeyListener(new OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    seguir.performClick();
-                    return true;
+            final Button signup = (Button) findViewById(R.id.signup);
+            signup.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent logedBefore = new Intent(getApplicationContext(), signupPage.class);
+                    startActivity(logedBefore);
                 }
-                return false;
-            }
-        });
+            });
+            final Button seguir = (Button) findViewById(R.id.button);
+            seguir.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    SharedPreferences.Editor editor = preferences.edit();
+                    EditText user = (EditText) findViewById(R.id.editText);
+                    EditText pass = (EditText) findViewById(R.id.editText2);
+                    String username = user.getText().toString();
+                    String password = pass.getText().toString();
+                    editor.putString("usernameWV", username).commit();
+                    editor.putString("passwordWV", password).commit();
+                    editor.remove("loged" + Boolean.valueOf(loged));
+                    editor.apply();
+                    editor.putBoolean("loged", true);
+                    editor.commit();
+                    Intent logedBefore = new Intent(getApplicationContext(), Login.class);
+                    logedBefore.putExtra("user", username);
+                    logedBefore.putExtra("password", password);
+                    startActivity(logedBefore);
                 }
+            });
+            EditText pass = (EditText) findViewById(R.id.editText2);
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.setVerticalScrollBarEnabled(false);
+            final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            toggle.syncState();
+            NavigationView navigationView = (NavigationView) findViewById(R.id.NavigationView);
+            navigationView.setScrollBarSize(0);
+            navigationView.setNavigationItemSelectedListener(this);
+            pass.setOnKeyListener(new OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                            (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                        seguir.performClick();
+                        return true;
+                    }
+                    return false;
+                }
+            });
+    }
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.about) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/General-Q-A/Nextbit-Forum-App-NextForum/m-p/16977");
+            Intent intent2 = new Intent(this,appthread.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }
-        else if (id == R.id.india) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/India/bd-p/India");
-        }
-        else  if (id == R.id.donate) {
+        else if (id == R.id.donate) {
             Intent intent2 = new Intent(this,donationsScreen.class);
             startActivity(intent2);
         }
+        else if (id == R.id.india) {
+            Intent intent2 = new Intent(this,India.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
+        }
         else if (id == R.id.store) {
             Intent intent2 = new Intent(this,store.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
+            finish();
         } else if (id == R.id.nav_wiki) {
-            Intent intent = new Intent(this,wiki.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(this,wiki.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         } else if (id == R.id.nav_discover) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://www.nextbit.com/pages/meet-robin");
+            Intent intent2 = new Intent(this,Discover.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         } else if (id == R.id.nav_themes) {
             Intent intent2 = new Intent(this,Preferences.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
+            finish();
         } else if (id == R.id.Community) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com");
+            Intent intent2 = new Intent(this,MainActivity.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }  else if (id == R.id.messages) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/notes/privatenotespage");
+            Intent intent2 = new Intent(this,Messages.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }  else if (id == R.id.notifications) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/notificationfeed/page");
-        }  else if (id == R.id.signin) {
-            Intent intent = new Intent(this,LoginPage.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(this,Notifications.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
+        }  else if (id == R.id.signout) {
+            Intent intent2 = new Intent(this,Login.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }   else if (id == R.id.forumsettings) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/user/myprofilepage/tab/personal-profile");
+            Intent intent2 = new Intent(this,forumsettings.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

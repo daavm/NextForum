@@ -46,6 +46,7 @@ public class Preferences extends PreferenceActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.preferences_layout);
         addPreferencesFromResource(R.xml.preferences);
+        getPreferenceScreen().findPreference("noImages").setEnabled(false);
         final Preference mint = (Preference) findPreference("mintTheme");
         final Preference midnight = (Preference) findPreference("midnightTheme");
         final Preference electric = (Preference) findPreference("electricTheme");

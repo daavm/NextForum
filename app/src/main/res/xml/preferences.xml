@@ -22,5 +22,9 @@
             android:defaultValue="false"
             android:summary="Browser mode"
             android:key="desktopMode" />
+        <CheckBoxPreference android:title="Don't load images"
+            android:defaultValue="false"
+            android:summary="(Will be enabled in the near future)"
+            android:key="noImages" />
     </PreferenceCategory>
 </PreferenceScreen>

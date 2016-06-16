@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Forum">
+        <menu>
+            <item android:id="@+id/Community" android:icon="@drawable/icon"
+                android:title="Community" />
+            <item android:id="@+id/messages" android:icon="@drawable/icon"
+                android:title="Messages"/>
+            <item android:id="@+id/notifications" android:icon="@drawable/icon"
+                android:title="Notifications" />
+            <item android:id="@+id/india" android:icon="@drawable/icon"
+                android:title="India Subforum" />
+            <item android:id="@+id/forumsettings" android:icon="@drawable/icon"
+                android:title="My Settings" />
+            <item android:id="@+id/signout" android:icon="@drawable/close_session"
+                android:title="Log out" />
+
+        </menu>
+    </item>
+
+    <item android:title="Other">
+        <menu>
+            <item android:id="@+id/nav_wiki" android:icon="@drawable/wiki"
+                android:title="Wiki" />
+            <item android:id="@+id/store" android:icon="@drawable/icon"
+                android:title="Online Store" />
+            <item android:id="@+id/nav_discover" android:icon="@drawable/sheep"
+                android:title="Discover" />
+            <item android:id="@+id/nav_themes" android:icon="@drawable/ic_build_white_24dp"
+                android:title="Settings" />
+        </menu>
+    </item>
+    <item android:title="About">
+        <menu>
+            <item android:id="@+id/about"
+                android:title="Developed by daavm98 (David)"
+                android:icon="@drawable/ic_face_white_24dp"/>
+            <item android:id="@+id/donate"
+                android:title="Buy me a cup of coffee"
+                android:icon="@drawable/ic_account_balance_wallet_white_24dp"/>
+        </menu>
+    </item>
+</menu>

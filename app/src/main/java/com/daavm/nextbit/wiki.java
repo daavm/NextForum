@@ -201,7 +201,7 @@ public class wiki extends AppCompatActivity
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
             finish();
-        }  else if (id == R.id.signin) {
+        }  else if (id == R.id.signout) {
             Intent intent2 = new Intent(this,Login.class);
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
