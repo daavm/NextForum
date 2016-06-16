@@ -70,7 +70,7 @@ import static android.R.id.input;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, SwipeRefreshLayout.OnRefreshListener {
+        implements NavigationView.OnNavigationItemSelectedListener, SwipeRefreshLayout.OnRefreshListener, WebView.FindListener {
     private SwipeRefreshLayout swipeRefreshLayout;
     private int myColor = Color.parseColor("#8fd6bd");
     private boolean isFirstTime() {
@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity
         }
         return !ranBefore;
     }
+
 
     private String notification;
     @Override
@@ -142,6 +143,7 @@ public class MainActivity extends AppCompatActivity
         //WebView Start//
         /////////////////
         final WebView myWebView = (WebView) this.findViewById(R.id.webView);
+
         myWebView.setVisibility(View.VISIBLE);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -157,6 +159,8 @@ public class MainActivity extends AppCompatActivity
         } else {
             webSettings.setLoadsImagesAutomatically(true);
         }
+
+
         webSettings.setBuiltInZoomControls(true);
         myWebView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
         webSettings.setDomStorageEnabled(true);
@@ -192,6 +196,21 @@ public class MainActivity extends AppCompatActivity
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 myWebView.loadUrl("javascript:if (typeof(document.getElementsByClassName('nav-links-wrapper')[0]) != 'undefined' && document.getElementsByClassName('nav-links-wrapper')[0] != null){document.getElementsByClassName('nav-links-wrapper')[0].style.display = 'none';} void 0");
+                myWebView.findAllAsync("Sign In");
+                myWebView.setFindListener(new WebView.FindListener() {
+                    @Override
+                    public void onFindResultReceived(int activeMatchOrdinal, int numberOfMatches, boolean isDoneCounting) {
+                        if(numberOfMatches > 0) {
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.remove("loged" + Boolean.valueOf(loged));
+                            editor.apply();
+                            editor.putBoolean("loged", false);
+                            editor.commit();
+                            Intent intent = new Intent(getApplicationContext(), LoginPage.class);
+                            startActivity(intent);
+                        }
+                    }
+                });
             }
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -472,6 +491,10 @@ public class MainActivity extends AppCompatActivity
                 });
             }
     @Override
+    public void onFindResultReceived(int activeMatchOrdinal, int numberOfMatches, boolean isDoneCounting) {
+        Toast.makeText(getApplicationContext(), "Matches: " + numberOfMatches, Toast.LENGTH_LONG).show();
+    }
+    @Override
     public void onRefresh() {
         WebView myWebView = (WebView) this.findViewById(R.id.webView);
         myWebView.reload();
@@ -586,6 +609,4 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-
-
 }
