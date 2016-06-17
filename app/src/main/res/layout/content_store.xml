@@ -12,23 +12,43 @@
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/amazon"
-        android:onClick="amazon"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView3"
         android:src="@drawable/logostore"
         android:onClick="official"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/flipkart_logo_detail"
+        android:onClick="flipkart"
+        android:layout_marginTop="300dp"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/amazon"
+        android:onClick="amazon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Flipkart for Indian buyers only!"
+        android:textColor="@color/black"
+        android:id="@+id/textView25"
+        android:layout_marginBottom="8dp"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,6 +58,7 @@
         android:textColor="@color/black"
         android:id="@+id/textView22"
         android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp" />
 
 </RelativeLayout>

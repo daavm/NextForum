@@ -49,6 +49,12 @@ public class store extends AppCompatActivity
         Intent intent5 = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent5);
     }
+    public void flipkart(View view)
+    {
+        Uri uri = Uri.parse("http://www.flipkart.com/nextbit-robin/p/itmehxg9ykxfsem5?pid=MOBEHXG9KGPC4PFT&al=%2F8ir%2FnIx9EVUNHZmpjH1isldugMWZuE7Qdj0IGOOVqu0oQTICUvcjh8EXq0AX7JP9nNpuxbAcAo%3D&ref=L%3A8304664403261932815&srno=p_2&findingMethod=Search&otracker=start"); // missing 'http://' will cause crash
+        Intent intent5 = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent5);
+    }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -85,38 +91,14 @@ public class store extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.NavigationView);
         navigationView.setNavigationItemSelectedListener(this);
     }
-    //WIKI PART
-    public void FAQ(View view)
-    {
-        setContentView(R.layout.activity_wiki_faq);
-    }
-    public void Hardware(View view)
-    {
-        setContentView(R.layout.activity_wiki_faq_hardware);
 
-    }
-    public void home(View view)
-    {
-        setContentView(R.layout.activity_wiki);
-
-    }
-    public void AboutN(View view)
-    {
-        setContentView(R.layout.activity_wiki_about);
-
-    }
-    public void history(View view)
-    {
-        setContentView(R.layout.activity_wiki_history);
-
-    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.about) {
-            Intent intent2 = new Intent(store.this,appthread.class);
+            Intent intent2 = new Intent(store.this,about.class);
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
             finish();

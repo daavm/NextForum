@@ -129,6 +129,16 @@ public class LoginPage extends AppCompatActivity
                 }
             });
             EditText pass = (EditText) findViewById(R.id.editText2);
+        LinearLayout layout = (LinearLayout)findViewById(R.id.login_layout);
+        if (midnightTheme) {
+            layout.setBackgroundColor(getResources().getColor(R.color.black));
+        } else if (mintTheme) {
+            layout.setBackgroundColor(getResources().getColor(R.color.login));
+        } else if (electricTheme) {
+            layout.setBackgroundColor(getResources().getColor(R.color.black));
+        } else {
+            layout.setBackgroundColor(getResources().getColor(R.color.black));
+        }
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.setVerticalScrollBarEnabled(false);
             final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -157,10 +167,8 @@ public class LoginPage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.about) {
-            Intent intent2 = new Intent(this,appthread.class);
-            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            Intent intent2 = new Intent(this,about.class);
             startActivity(intent2);
-            finish();
         }
         else if (id == R.id.donate) {
             Intent intent2 = new Intent(this,donationsScreen.class);
@@ -174,14 +182,10 @@ public class LoginPage extends AppCompatActivity
         }
         else if (id == R.id.store) {
             Intent intent2 = new Intent(this,store.class);
-            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
-            finish();
         } else if (id == R.id.nav_wiki) {
             Intent intent2 = new Intent(this,wiki.class);
-            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
-            finish();
         } else if (id == R.id.nav_discover) {
             Intent intent2 = new Intent(this,Discover.class);
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

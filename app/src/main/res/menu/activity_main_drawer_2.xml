@@ -4,14 +4,14 @@
         <menu>
             <item android:id="@+id/Community" android:icon="@drawable/icon"
                 android:title="Community" />
-            <item android:id="@+id/messages" android:icon="@drawable/icon"
-                android:title="Messages"/>
-            <item android:id="@+id/notifications" android:icon="@drawable/icon"
+            <item android:id="@+id/notifications" android:icon="@drawable/ic_error_white_24dp"
                 android:title="Notifications" />
-            <item android:id="@+id/india" android:icon="@drawable/icon"
+            <item android:id="@+id/messages" android:icon="@drawable/ic_mail_white_24dp"
+                android:title="Messages"/>
+            <item android:id="@+id/india" android:icon="@drawable/ic_language_white_24dp"
                 android:title="India Subforum" />
-            <item android:id="@+id/forumsettings" android:icon="@drawable/icon"
-                android:title="My Settings" />
+            <item android:id="@+id/forumsettings" android:icon="@drawable/ic_settings_white_24dp"
+                android:title="Profile Settings" />
             <item android:id="@+id/signout" android:icon="@drawable/close_session"
                 android:title="Log out" />
 
@@ -22,12 +22,16 @@
         <menu>
             <item android:id="@+id/nav_wiki" android:icon="@drawable/wiki"
                 android:title="Wiki" />
-            <item android:id="@+id/store" android:icon="@drawable/icon"
+            <item android:id="@+id/store" android:icon="@drawable/ic_shop_white_24dp"
                 android:title="Online Store" />
             <item android:id="@+id/nav_discover" android:icon="@drawable/sheep"
                 android:title="Discover" />
+        </menu>
+    </item>
+    <item android:title="Settings">
+        <menu>
             <item android:id="@+id/nav_themes" android:icon="@drawable/ic_build_white_24dp"
-                android:title="Settings" />
+                android:title="App Settings" />
         </menu>
     </item>
     <item android:title="About">

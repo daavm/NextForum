@@ -73,16 +73,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SwipeRefreshLayout.OnRefreshListener, WebView.FindListener {
     private SwipeRefreshLayout swipeRefreshLayout;
     private int myColor = Color.parseColor("#8fd6bd");
-    private boolean isFirstTime() {
-        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
-        boolean ranBefore = preferences.getBoolean("RanBefore", false);
-        if (!ranBefore) {
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putBoolean("RanBefore", true);
-            editor.commit();
-        }
-        return !ranBefore;
-    }
 
 
     private String notification;
@@ -143,19 +133,11 @@ public class MainActivity extends AppCompatActivity
         //WebView Start//
         /////////////////
         final WebView myWebView = (WebView) this.findViewById(R.id.webView);
-
         myWebView.setVisibility(View.VISIBLE);
-        WebSettings webSettings = myWebView.getSettings();
+        final WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         if (noImages) {
-            if(desktopMode){
-
-            }else{
-                if(myWebView.getUrl().contains(".jpg")) {
-                } else {
-                    webSettings.setLoadsImagesAutomatically(false);
-                }
-            }
+            webSettings.setLoadsImagesAutomatically(false);
         } else {
             webSettings.setLoadsImagesAutomatically(true);
         }
@@ -461,6 +443,7 @@ public class MainActivity extends AppCompatActivity
         ///////////////
         //WebView End//
         ///////////////
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.setVerticalScrollBarEnabled(false);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -538,8 +521,8 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.about) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/General-Q-A/Nextbit-Forum-App-NextForum/m-p/16977");
+            Intent intent2 = new Intent(this,about.class);
+            startActivity(intent2);
         }
         else if (id == R.id.india) {
             WebView myWebView = (WebView) this.findViewById(R.id.webView);

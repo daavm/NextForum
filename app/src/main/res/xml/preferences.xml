@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="THEME CHOOSER">
-    <CheckBoxPreference android:title="You prefer darkness?"
+    <CheckBoxPreference android:title="Midnight"
         android:id="@+id/midnight"
         android:defaultValue="false"
-        android:summary="Midnight Theme"
+        android:summary="You prefer darkness?"
         android:key="midnightTheme" />
-    <CheckBoxPreference android:title="Mmm... Fresh look! :)"
+    <CheckBoxPreference android:title="Mint"
         android:id="@+id/mint"
         android:defaultValue="false"
-        android:summary="Mint Theme"
+        android:summary="Mmm... Fresh look! :)"
         android:key="mintTheme" />
-    <CheckBoxPreference android:title="Oh, nice decision!"
+    <CheckBoxPreference android:title="Electric (Default)"
         android:id="@+id/electric"
         android:defaultValue="false"
-        android:summary="Electric Theme (Default)"
+        android:summary="Oh, nice decision!"
         android:key="electricTheme" />
     </PreferenceCategory>
     <PreferenceCategory android:title="FORUM">
-        <CheckBoxPreference android:title="Load forum in desktop mode"
+        <CheckBoxPreference android:title="Browser mode"
             android:defaultValue="false"
-            android:summary="Browser mode"
+            android:summary="Load forum in desktop mode"
             android:key="desktopMode" />
-        <CheckBoxPreference android:title="Don't load images"
+        <CheckBoxPreference android:title="Data saver"
             android:defaultValue="false"
-            android:summary="(Will be enabled in the near future)"
+            android:summary="Images won't be load while using the forum"
             android:key="noImages" />
     </PreferenceCategory>
 </PreferenceScreen>

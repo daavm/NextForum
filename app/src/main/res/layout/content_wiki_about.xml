@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -35,10 +35,11 @@
                 android:textIsSelectable="true" />
 
             <TextView
+                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Nextbit is a small startup based out of San Francisco, founded in October 2012, that started out designing software for Cyanogen called Baton. Baton was a system to sync apps and their data between devices so users could easily pick up what they were doing on one device in the same state on another device. They then launched a kickstarter for Robin, a smartphone that automatically uploads apps, data, and media to the cloud and off the device that are not frequently used when the device is short on storage.  The Nextbit team is formed by experienced workers. Some of them worked at Google when Android came to life. Others come from Motorola, HTC, 3LM, and the like. They are professionals who have helped form Android into what it is today. Now, they have come together in an attempt to again change the direction of mobile devices.  The Nextbit Team define themsleves as a small band of rebels who want to free people from the limits of today&apos;s mobile technology."
+                android:text="Nextbit is a small startup based out of San Francisco, founded in October 2012, that started out designing software for Cyanogen called Baton. Baton was a system to sync apps and their data between devices so users could easily pick up what they were doing on one device in the same state on another device. They then launched a kickstarter for Robin, a smartphone that automatically uploads apps, data, and media to the cloud and off the device that are not frequently used when the device is short on storage.&apos;s mobile technology."
                 android:id="@+id/textView9"
                 android:layout_below="@+id/textView5"
                 android:textIsSelectable="true"
@@ -48,16 +49,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/team_founders"
+                android:layout_marginTop="-75dp"
                 android:layout_below="@+id/textView9"
                 android:id="@+id/teamfounders"/>
             <TextView
                 android:layout_width="match_parent"
+                android:layout_marginTop="-75dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="The Nextbit team is formed by experienced workers. Some of them worked at Google when Android came to life. Others come from Motorola, HTC, 3LM, and the like. They are professionals who have helped form Android into what it is today. Now, they have come together in an attempt to again change the direction of mobile devices.  The Nextbit Team define themsleves as a small band of rebels who want to free people from the limits of today&apos;s mobile technology."
+                android:text="The Nextbit team is formed by experienced workers. Some of them worked at Google when Android came to life. Others come from Motorola, HTC, 3LM, and the like. They are professionals who have helped form Android into what it is today. Now, they have come together in an attempt to again change the direction of mobile devices.&apos;s mobile technology."
                 android:layout_below="@+id/teamfounders"
                 android:textIsSelectable="true"
                 android:paddingTop="1dp"
+                android:id="@+id/about2"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="They define define themsleves as a 'small band of rebels' who want to free people from the limits of today's mobile technology."
+                android:layout_below="@+id/about2"
+                android:textIsSelectable="true"
+                android:paddingTop="1dp"
+                android:id="@+id/about3"
                 android:textAlignment="center"/>
         </RelativeLayout>
     </ScrollView>

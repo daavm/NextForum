@@ -235,51 +235,73 @@ public class signupPage extends AppCompatActivity
             }
         });
     }
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.about) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/General-Q-A/Nextbit-Forum-App-NextForum/m-p/16977");
+            Intent intent2 = new Intent(this,about.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }
-        else if (id == R.id.india) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/India/bd-p/India");
-        }
-        else  if (id == R.id.donate) {
+        else if (id == R.id.donate) {
             Intent intent2 = new Intent(this,donationsScreen.class);
             startActivity(intent2);
         }
+        else if (id == R.id.india) {
+            Intent intent2 = new Intent(this,India.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
+        }
         else if (id == R.id.store) {
             Intent intent2 = new Intent(this,store.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
+            finish();
         } else if (id == R.id.nav_wiki) {
-            Intent intent = new Intent(this,wiki.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(this,wiki.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         } else if (id == R.id.nav_discover) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://www.nextbit.com/pages/meet-robin");
+            Intent intent2 = new Intent(this,Discover.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         } else if (id == R.id.nav_themes) {
             Intent intent2 = new Intent(this,Preferences.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
+            finish();
         } else if (id == R.id.Community) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com");
+            Intent intent2 = new Intent(this,MainActivity.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }  else if (id == R.id.messages) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/notes/privatenotespage");
+            Intent intent2 = new Intent(this,Messages.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }  else if (id == R.id.notifications) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/notificationfeed/page");
+            Intent intent2 = new Intent(this,Notifications.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }  else if (id == R.id.signout) {
-            Intent intent = new Intent(this,LoginPage.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(this,Login.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }   else if (id == R.id.forumsettings) {
-            WebView myWebView = (WebView) this.findViewById(R.id.webView);
-            myWebView.loadUrl("https://community.nextbit.com/t5/user/myprofilepage/tab/personal-profile");
+            Intent intent2 = new Intent(this,forumsettings.class);
+            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent2);
+            finish();
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

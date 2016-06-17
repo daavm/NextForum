@@ -64,7 +64,7 @@ public class donationsScreen extends AppCompatActivity
             // Handle navigation view item clicks here.
             int id = item.getItemId();
             if (id == R.id.about) {
-            Intent intent2 = new Intent(this,appthread.class);
+            Intent intent2 = new Intent(this,about.class);
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
             finish();

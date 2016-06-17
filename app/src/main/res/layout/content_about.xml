@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/app_bar_about"
+    tools:context=".about"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:text="david"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:layout_marginTop="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView24"
+        android:layout_below="@+id/avatar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="*Junior Android Developer*"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView26"
+        android:layout_below="@+id/textView24"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Computer Science near future student"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView27"
+        android:layout_below="@+id/textView26"
+        android:layout_alignEnd="@+id/avatar" />
+
+    <Button
+        android:text="Go to the app's forum thread"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"
+        android:clickable="true"
+        android:onClick="thread"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/textView27"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:src="@drawable/avatar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/avatar"
+        android:layout_marginTop="72dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
