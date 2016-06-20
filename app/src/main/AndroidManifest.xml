@@ -24,7 +24,6 @@
         android:allowBackup="true"
         android:icon="@drawable/sheep"
         android:label="@string/app_name"
-        android:launchMode="singleTop"
         android:noHistory="true"
         android:launchMode="singleTop"
         android:supportsRtl="true"
@@ -102,10 +101,6 @@
             android:name=".Discover"
             android:label="Nextbit"
             android:theme="@style/Electric" />
-        <activity
-            android:name=".Discover"
-            android:label="Nextbit"
-            android:theme="@style/Mint" />
         <activity
             android:name=".Messages"
             android:label="Forum"

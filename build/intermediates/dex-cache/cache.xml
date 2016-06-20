@@ -2,184 +2,346 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\David\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-beta1\support-annotations-24.0.0-beta1.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="04705c19cdec60364bc04e2e928c274da1ba301b">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0-beta1_9d4945443c5ceb21e28c4cad3fd199b775ba4ff9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0-beta1\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="471ce760dbf7b784fd74892b5113bca4e0d8def7">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.0.0-beta1_abbd17f4bc9cdc0e8d138da2fa20f1da3dfa19e6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\design\24.0.0-beta1\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="6fd4eef51a55508bdf3f43f8ad96992e1da3850b">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.0.0-beta1_ca98d8a91894029d4d99c61d3b1904c53ca8bcb9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="060a7157438a0b1b0706b99c430fb3ecbc5a79a4">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.0.2_764fbf9750ea46000af1cb887c4f92ea98c236f7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.2_4a704693ce141a8c4bc402f6a36be527ec95b3ef\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.pushbots\pushbots-lib\2.0.13\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="635a77d3f219ad345f4b82dba86e4aabe4f35b94">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.pushbots-pushbots-lib-2.0.13_0faf5424846a899e82e46ae08a7d3fecdb04c4ad\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="829c6e46cb221c2102801221c648b77113743e81">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.0.2_e61491fb18085c8c71e7ef0bee2f63d2c220d4ad\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-beta1\jars\libs\internal_impl-24.0.0-beta1.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="23d564c059873f398dc5d967f56791a66472ce76">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0-beta1_4c7309995dcbd8ca4917065b4f32cfcb77e511a4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha1\constraint-layout-solver-1.0.0-alpha1.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="78d61c347aa5002119e3c17bffcbebf28fe07b0b">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-alpha1_bd729d769e6ed141553e2430ed2c3fcf9eff6404\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.4\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.clans-fab-1.6.4_85b84c2881da774d17087dacb0d40acd1696aa36\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha1\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="ea579447f9afb1fbcb28e150e1cd4bfe7f56e75b">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-alpha1_0a1e6a2efb3fd00130b722071d3a32d7a1ae17e5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.2_eb4667ac16b72083ab6a9094d92b5f30bb2bcf68\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.2_6c55f12bd6bb647b1b44d29eceae714b303733dc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
         revision="24.0.0 rc4"
         sha1="94d9cedd04b124aed044ac71c451a292856d854c">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.2_fbdbc3744c1dccc51fa639c6e02e4048414741d8\classes.dex" />
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-base-9.0.2_1edec881db8338fe21bff42c922324105589024c.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-beta1\jars\classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="97f82fd0c185bd2881a93646954f2429be4baa86">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0-beta1_6510b7e9ea6e42568154fc5864c5c6903960a6ab\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="c28dae7b5af8e899f7e743b8276ebc776e7fee0d">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fd282f84877bd9220559c4c5571b89051e7fd961\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="24.0.0 rc4"
-        sha1="f45686752e1bb490f28a8da1630e4ff0067f0a58">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a7b8f4fcf85666072ccc609a25e5f1307b7e1ef2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-beta1\jars\classes.jar"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-beta1/jars/classes.jar"
         jumboMode="true"
         optimize="false"
         revision="24.0.0 rc4"
         sha1="8d3137a71200c47974c0454ae8ad272a09c533eb">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0-beta1_05336e2ee1756e6d3b69c43621e86912ccb1ed3d\classes.dex" />
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.0.0-beta1_f1855b9efb631dc174780466aa9be30355b7e0b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="ea579447f9afb1fbcb28e150e1cd4bfe7f56e75b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.android.support.constraint-constraint-layout-1.0.0-alpha1_ae043ea30cbe3c5deb761edbaed817c15e8030d3.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-beta1\jars\classes.jar"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/jars/classes.jar"
         jumboMode="true"
         optimize="false"
         revision="24.0.0 rc4"
-        sha1="f81eecb8d5e9e548f75f277830a94a9b37fbb987">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0-beta1_94dc773bb0258817ad2a64eca97c166615aecb24\classes.dex" />
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.clans-fab-1.6.4_c250e1c93e3a6fdc4f8837b61ea162ddcc301e92/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-beta1\jars\classes.jar"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.0.2_12e93e45d0eed00cbcde6d94918f12269855a8c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-beta1/jars/classes.jar"
         jumboMode="true"
         optimize="false"
         revision="24.0.0 rc4"
         sha1="3c0208faf42864e6695345e64d1b955070263819">
-        <dex dex="C:\Users\David\Dropbox\Proyectos Android\NextForum\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0-beta1_6d8328d6c85913367e9aebc8aab657c6879f81d2\classes.dex" />
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.0.0-beta1_98ef71aba9d1a63a3d70f5199fee778cf55293ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="8d3137a71200c47974c0454ae8ad272a09c533eb">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-24.0.0-beta1_f1855b9efb631dc174780466aa9be30355b7e0b3.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-beta1/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="f81eecb8d5e9e548f75f277830a94a9b37fbb987">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.0.0-beta1_284b0f8bebf996c26ce1f51c168ae740c311151c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="5ca8fcaa573be95e08733a00aded5201b6ecc8b3">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_88b0ae780b88ed4c29508b799f757dbe7b9808f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="471ce760dbf7b784fd74892b5113bca4e0d8def7">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.android.support-recyclerview-v7-24.0.0-beta1_bb79c64c96a51d1f9e09794d21dfd70088a392f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.pushbots/pushbots-lib/2.0.13/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="635a77d3f219ad345f4b82dba86e4aabe4f35b94">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.pushbots-pushbots-lib-2.0.13_e3884daad05c1f6eb7c981f12611efba1915f1b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="3c0208faf42864e6695345e64d1b955070263819">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-24.0.0-beta1_98ef71aba9d1a63a3d70f5199fee778cf55293ef.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha1/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="ea579447f9afb1fbcb28e150e1cd4bfe7f56e75b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-alpha1_ae043ea30cbe3c5deb761edbaed817c15e8030d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="f81eecb8d5e9e548f75f277830a94a9b37fbb987">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-24.0.0-beta1_284b0f8bebf996c26ce1f51c168ae740c311151c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.github.clans-fab-1.6.4_c250e1c93e3a6fdc4f8837b61ea162ddcc301e92.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="c8eee3a89aa5df77d9385cd2fa0b29d58bb54cf0">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_870d9ab7b5f9f8309a9ba0e4953c0b91eeaa2271/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Android/Sdk/extras/android/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-alpha1/constraint-layout-solver-1.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="78d61c347aa5002119e3c17bffcbebf28fe07b0b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/constraint-layout-solver-1.0.0-alpha1_ae1224668bbade3c0b70df0dbee5dcf4e188a722.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.0.2_1edec881db8338fe21bff42c922324105589024c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-common-9.0.2_12e93e45d0eed00cbcde6d94918f12269855a8c1.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.pushbots/pushbots-lib/2.0.13/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="635a77d3f219ad345f4b82dba86e4aabe4f35b94">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.pushbots-pushbots-lib-2.0.13_e3884daad05c1f6eb7c981f12611efba1915f1b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-beta1/jars/libs/internal_impl-24.0.0-beta1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="23d564c059873f398dc5d967f56791a66472ce76">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/internal_impl-24.0.0-beta1_5be73ec89108f13ef4dcbf3231d0181cf574b426.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Android/Sdk/extras/android/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-alpha1/constraint-layout-solver-1.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="78d61c347aa5002119e3c17bffcbebf28fe07b0b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.0-alpha1_ae1224668bbade3c0b70df0dbee5dcf4e188a722/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="060a7157438a0b1b0706b99c430fb3ecbc5a79a4">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.0.2_c2a8124e9b78a1141d2d590374c259c200e9ce97/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-basement-9.0.2_cfd57e862e1332c9f47c577230c16c2117b62903.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0-beta1/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="471ce760dbf7b784fd74892b5113bca4e0d8def7">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.0.0-beta1_bb79c64c96a51d1f9e09794d21dfd70088a392f3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0-beta1/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="6fd4eef51a55508bdf3f43f8ad96992e1da3850b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.0.0-beta1_bf18aa6e44e707f68dd802668332850ad491a79d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="829c6e46cb221c2102801221c648b77113743e81">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.0.2_c9a66d62bea35669f4bdfbc26b6b752cbdc61793/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="060a7157438a0b1b0706b99c430fb3ecbc5a79a4">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-auth-9.0.2_c2a8124e9b78a1141d2d590374c259c200e9ce97.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.0.2_d493e9c90da4cc5f15b0f19a57b48e9e2f35e48d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="829c6e46cb221c2102801221c648b77113743e81">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-auth-base-9.0.2_c9a66d62bea35669f4bdfbc26b6b752cbdc61793.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="97f82fd0c185bd2881a93646954f2429be4baa86">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-24.0.0-beta1_a8c85bf5537b41f01fb26af90b0e3b767bfe234c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-beta1/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="97f82fd0c185bd2881a93646954f2429be4baa86">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.0.0-beta1_a8c85bf5537b41f01fb26af90b0e3b767bfe234c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="6fd4eef51a55508bdf3f43f8ad96992e1da3850b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.android.support-design-24.0.0-beta1_bf18aa6e44e707f68dd802668332850ad491a79d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-beta1/jars/libs/internal_impl-24.0.0-beta1.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="23d564c059873f398dc5d967f56791a66472ce76">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0-beta1_5be73ec89108f13ef4dcbf3231d0181cf574b426/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-tasks-9.0.2_d493e9c90da4cc5f15b0f19a57b48e9e2f35e48d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.0.2_cfd57e862e1332c9f47c577230c16c2117b62903/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davidmarcos/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0-beta1/support-annotations-24.0.0-beta1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0 rc4"
+        sha1="04705c19cdec60364bc04e2e928c274da1ba301b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/pre-dexed/release/support-annotations-24.0.0-beta1_4b3f37f426fd6284963514da2f1342500031ab48.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidmarcos/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0-beta1/support-annotations-24.0.0-beta1.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="24.0.0 rc4"
+        sha1="04705c19cdec60364bc04e2e928c274da1ba301b">
+        <dex dex="/home/davidmarcos/Projects/Android Studio/NextForum/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.0.0-beta1_4b3f37f426fd6284963514da2f1342500031ab48/classes.dex" />
     </item>
 
 </items>

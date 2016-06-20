@@ -151,11 +151,6 @@ public class donations extends AppCompatActivity
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent2);
             finish();
-        }  else if (id == R.id.signin) {
-            Intent intent2 = new Intent(this,Login.class);
-            intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent2);
-            finish();
         }   else if (id == R.id.forumsettings) {
             Intent intent2 = new Intent(this,forumsettings.class);
             intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
