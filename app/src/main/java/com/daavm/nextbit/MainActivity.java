@@ -11,6 +11,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.support.annotation.DrawableRes;
 import android.support.design.widget.AppBarLayout;
@@ -74,9 +75,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SwipeRefreshLayout.OnRefreshListener, WebView.FindListener {
     private SwipeRefreshLayout swipeRefreshLayout;
     private int myColor = Color.parseColor("#8fd6bd");
-
-
-    private String notification;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -87,7 +85,6 @@ public class MainActivity extends AppCompatActivity
         boolean midnightTheme = preferences.getBoolean("midnightTheme", false);
         boolean mintTheme = preferences.getBoolean("mintTheme", false);
         boolean electricTheme = preferences.getBoolean("electricTheme", false);
-
         if (midnightTheme) {
             setTheme(R.style.Midnight);
         } else if (mintTheme) {
@@ -134,6 +131,41 @@ public class MainActivity extends AppCompatActivity
         //WebView Start//
         /////////////////
         final WebView myWebView = (WebView) this.findViewById(R.id.webView);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.setVerticalScrollBarEnabled(false);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle.syncState();
+        NavigationView navigationView = (NavigationView) findViewById(R.id.NavigationView);
+        navigationView.setScrollBarSize(0);
+        navigationView.setNavigationItemSelectedListener(this);
+        if (Build.VERSION.SDK_INT >= 23) {
+            myWebView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+                final AppBarLayout appbar = (AppBarLayout) findViewById(R.id.app_bar);
+
+                @Override
+                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                    if (scrollY > 1200) {
+                        if (scrollY > oldScrollY) {
+                            appbar.animate().translationY(-appbar.getBottom()).setInterpolator(new AccelerateInterpolator()).start();
+                        }
+                    }
+                    if (scrollY < oldScrollY) {
+                        if (scrollY < 1200) {
+                            appbar.setVisibility(View.VISIBLE);
+                        } else {
+                            appbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator()).start();
+                        }
+                    }
+                }
+            });
+        }
+        View hView =  navigationView.getHeaderView(0);
+        String usernameV = preferences.getString("usernameWV", "");
+        TextView usernameText = (TextView)hView.findViewById(R.id.user);
+        usernameText.setText("Hello " + usernameV + "!");
         myWebView.setVisibility(View.VISIBLE);
         final WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -142,8 +174,6 @@ public class MainActivity extends AppCompatActivity
         } else {
             webSettings.setLoadsImagesAutomatically(true);
         }
-
-
         webSettings.setBuiltInZoomControls(true);
         myWebView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
         webSettings.setDomStorageEnabled(true);
@@ -450,37 +480,7 @@ public class MainActivity extends AppCompatActivity
         //WebView End//
         ///////////////
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.setVerticalScrollBarEnabled(false);
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.NavigationView);
-        navigationView.setScrollBarSize(0);
-        navigationView.setNavigationItemSelectedListener(this);
-        if (Build.VERSION.SDK_INT >= 23) {
-            myWebView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-                final AppBarLayout appbar = (AppBarLayout) findViewById(R.id.app_bar);
 
-                @Override
-                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                    if (scrollY > 1200) {
-                        if (scrollY > oldScrollY) {
-                            appbar.animate().translationY(-appbar.getBottom()).setInterpolator(new AccelerateInterpolator()).start();
-                        }
-                    }
-                    if (scrollY < oldScrollY) {
-                        if (scrollY < 1200) {
-                            appbar.setVisibility(View.VISIBLE);
-                        } else {
-                            appbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator()).start();
-                        }
-                    }
-                }
-            });
-        }
     }
     @Override
     public void onFindResultReceived(int activeMatchOrdinal, int numberOfMatches, boolean isDoneCounting) {

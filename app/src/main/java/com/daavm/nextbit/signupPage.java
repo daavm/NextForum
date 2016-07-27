@@ -212,6 +212,8 @@ public class signupPage extends AppCompatActivity
                             logedBefore.putExtra("user", username);
                             logedBefore.putExtra("lastname", lastnameF);
                             logedBefore.putExtra("name", nameF);
+                            editor.putString("usernameWV", username).commit();
+                            editor.putString("passwordWV", password).commit();
                             logedBefore.putExtra("pass", password);
                             logedBefore.putExtra("email", email);
                             editor.remove("loged" + Boolean.valueOf(loged));

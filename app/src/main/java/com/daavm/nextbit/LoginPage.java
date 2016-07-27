@@ -123,8 +123,8 @@ public class LoginPage extends AppCompatActivity
                     editor.putBoolean("loged", true);
                     editor.commit();
                     Intent logedBefore = new Intent(getApplicationContext(), Login.class);
-                    logedBefore.putExtra("user", username);
                     logedBefore.putExtra("password", password);
+                    logedBefore.putExtra("user", username);
                     startActivity(logedBefore);
                 }
             });
